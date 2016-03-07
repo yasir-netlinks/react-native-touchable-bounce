@@ -30,7 +30,7 @@ var Example = React.createClass({
 });
 ```
 
-## Running Example
+## Running example
 
 Start the packager by doing:
 
