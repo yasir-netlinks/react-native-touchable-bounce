@@ -1,0 +1,29 @@
+{
+  "name": "react-native-touchable-bounce",
+  "version": "1.0.0",
+  "description": "React Native Touchable Bounce",
+  "main": "src/index.js",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:grabbou/react-native-touchable-bounce.git"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "keywords": [
+    "react",
+    "react",
+    "native",
+    "touchable"
+  ],
+  "peerDependencies": {
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "babel-eslint": "^5.0.0",
+    "eslint": "^2.2.0",
+    "eslint-plugin-react": "^4.1.0",
+    "react-native": "^0.12"
+  }
+}
