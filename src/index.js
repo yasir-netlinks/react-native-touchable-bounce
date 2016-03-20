@@ -11,14 +11,8 @@
 var React = require('react-native');
 var { Animated, Touchable } = React;
 
-// Touchable is now exported on master, fallback for older versions
-if (!Touchable) {
-  Touchable = require('Touchable');
-}
-
 // @todo do not rely on internal Facebook modules
 var EdgeInsetsPropType = require('EdgeInsetsPropType');
-var NativeMethodsMixin = require('NativeMethodsMixin');
 
 type Event = Object;
 
@@ -37,7 +31,7 @@ var PRESS_RETENTION_OFFSET = {top: 20, left: 20, right: 20, bottom: 30};
  * interesting interactions such as `handleTouchablePress`.
  */
 var TouchableBounce = React.createClass({
-  mixins: [Touchable.Mixin, NativeMethodsMixin],
+  mixins: [Touchable.Mixin],
 
   propTypes: {
     onPress: React.PropTypes.func,
@@ -56,7 +50,12 @@ var TouchableBounce = React.createClass({
      * reactivated! Move it back and forth several times while the scroll view
      * is disabled. Ensure you pass in a constant to reduce memory allocations.
      */
-    pressRetentionOffset: EdgeInsetsPropType,
+    pressRetentionOffset: React.PropTypes.shape({
+      top: React.PropTypes.number,
+      left: React.PropTypes.number,
+      bottom: React.PropTypes.number,
+      right: React.PropTypes.number
+    }),
     /**
      * This defines how far your touch can start away from the button. This is
      * added to `pressRetentionOffset` when moving off of the button.
