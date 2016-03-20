@@ -11,9 +11,6 @@
 var React = require('react-native');
 var { Animated, Touchable } = React;
 
-// @todo do not rely on internal Facebook modules
-var EdgeInsetsPropType = require('EdgeInsetsPropType');
-
 type Event = Object;
 
 type State = {
