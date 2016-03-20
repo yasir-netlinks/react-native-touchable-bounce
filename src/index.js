@@ -11,6 +11,13 @@
 var React = require('react-native');
 var { Animated, Touchable } = React;
 
+var EdgeInsetsPropType = React.PropTypes.shape({
+  top: React.PropTypes.number,
+  left: React.PropTypes.number,
+  bottom: React.PropTypes.number,
+  right: React.PropTypes.number
+});
+
 type Event = Object;
 
 type State = {
@@ -47,12 +54,7 @@ var TouchableBounce = React.createClass({
      * reactivated! Move it back and forth several times while the scroll view
      * is disabled. Ensure you pass in a constant to reduce memory allocations.
      */
-    pressRetentionOffset: React.PropTypes.shape({
-      top: React.PropTypes.number,
-      left: React.PropTypes.number,
-      bottom: React.PropTypes.number,
-      right: React.PropTypes.number
-    }),
+    pressRetentionOffset: EdgeInsetsPropType,
     /**
      * This defines how far your touch can start away from the button. This is
      * added to `pressRetentionOffset` when moving off of the button.
