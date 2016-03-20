@@ -2,6 +2,8 @@
 
 React Native Touchable Bounce component.
 
+<img src="https://cloud.githubusercontent.com/assets/2464966/13904982/de81a4ae-eeb2-11e5-93d5-797ba1758a23.gif" width="300" />
+
 ## Installation
 
 ```bash
